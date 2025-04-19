@@ -1,6 +1,5 @@
 import java.io.*;
-import java.util.Objects;
-import java.util.Scanner;
+import java.util.*;
 
 public class Program1 {
     public static void main(String[] args) throws FileNotFoundException {
