@@ -3,10 +3,18 @@ import java.util.*;
 class List {
     Vector<Item> items = new Vector<>();
     void append(int id, String name, int price){
+        if(items.size() == 5) {
+            System.out.println("List is full");
+            return;
+        }
         items.add(new Item(id, name, price));
     }
 
     void addSpec(int loc, int id, String name, int price){
+        if(items.size() == 5) {
+            System.out.println("List is full");
+            return;
+        }
         items.add(loc, new Item(id, name, price));
     }
 
@@ -49,6 +57,9 @@ class Program5 {
         list.append(1,"Orange", 50);
         list.append(3,"Apple", 150);
         list.addSpec(1, 2,"Banana", 75);
+        list.addSpec(1, 4,"Mango", 175);
+        list.addSpec(1, 5,"Grapes", 90);
+        list.addSpec(1, 6,"Kiwi", 170);
         list.print();
         list.remove(2);
         list.print();
